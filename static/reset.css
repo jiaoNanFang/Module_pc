@@ -1,0 +1,96 @@
+
+/**
+  清除默认样式 可直接在index.html中引入
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+div{
+  box-sizing: border-box;
+}
+input,video,audio{
+  outline: none;
+  border: none;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/**
+  常用样式
+ */
+
+/*显示省略号*/
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*显示多行*/
+.ssk{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+
+/* 镂空渐变字体*/
+@font-face{
+  font-family:DS;
+  src:url("../../utils/hanti.ttf");
+}
+.commonality{
+  font-family:DS;
+  font-size: 0.6rem;
+  margin-right: 0.01rem;
+  color: #a84c00;
+  background: linear-gradient(#a84c00, #813a00);
+  background-image: -webkit-gradient(linear, top 0, bottom  0);
+  -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+  -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+
