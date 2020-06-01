@@ -94,3 +94,24 @@ input,video,audio{
   -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
 }
 
+/** 倒三角 */
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 25px 0 25px;
+  border-color:  rgb(245, 129, 127) transparent transparent transparent;
+}
+
+/*css自带的border-style属性 dotted/ dashed . 效果展示出来太密了，并不符合UI设计
+具体的虚线的颜色和间距都可以通过repeating-linear-gradient生成的条纹背景去调整。
+*/
+.dotted-line{
+  border: 1px dashed transparent;
+  background: linear-gradient(white,white) padding-box, repeating-linear-gradient(-45deg,#ccc 0, #ccc .25em,white 0,white .75em);
+}
+
+/*calc()函数 用来计算css属性的值。+和-运算符在运算符和值之间需要一个空格*/
+/*宽度：calc（100％ - 34px）;*/
+
+
